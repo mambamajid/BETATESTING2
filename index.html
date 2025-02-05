@@ -71,12 +71,9 @@
     <h2>Favorites</h2>
 
     <h3>Favorite Song</h3>
-    <div class="video-container" data-video-id="K4DyBUG242c" data-start="11">
-        <img src="https://img.youtube.com/vi/K4DyBUG242c/hqdefault.jpg" alt="Video Thumbnail">
-        <div class="play-button">▶</div>
-        <iframe width="560" height="315" src="" 
-            allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/K4DyBUG242c?start=11" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
 
     <h3>Favorite Movie</h3>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZfuNTqbHE8?start=71" 
@@ -144,23 +141,6 @@
         <button type="submit">Send</button>
     </form>
 </section>
-
-<script>
-    document.querySelectorAll('.video-container').forEach(container => {
-        const thumbnail = container.querySelector('img');
-        const playButton = container.querySelector('.play-button');
-        const iframe = container.querySelector('iframe');
-        const videoId = container.getAttribute('data-video-id');
-        const startTime = container.getAttribute('data-start') || 0;
-
-        container.addEventListener('click', () => {
-            thumbnail.style.display = 'none';
-            playButton.style.display = 'none';
-            iframe.style.display = 'block';
-            iframe.src = `https://www.youtube.com/embed/${videoId}?start=${startTime}&autoplay=1`;
-        });
-    });
-</script>
 
 </body>
 </html>
